@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cabinet 4</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet/less" type="text/css" href="less/head.less">
+    <link rel="stylesheet/less" type="text/css" href="less/styles.less">
+    <link rel="stylesheet/less" type="text/css" href="less/forms.less">
+
+    <script src="js/less-1.3.3.min.js" type="text/javascript"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
+    <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/modal.js" type="text/javascript"></script>
+
+    <!--  freetile  -->
+    <script src="js/jquery.freetile.js" type="text/javascript"></script>
+
+    <script>
+        $(function() {
+            // Авторазмещение мультиблоков в контейнере
+            var container = document.querySelector('#freetile');
+
+
+            $('#freetile').freetile({
+                selector: '.multiblock'
+            });
+            // Кастомный селект бокс
+            $("select").selectBoxIt();
+
+        });
+
+        function showModal(item) {
+            $("#modal-"+item).css("display","block");
+            $("#modal").css("display","block");
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        $(function(){
+            $(window).load(function(){
+                $(".scrolled").mCustomScrollbar({
+                    axis:"y",
+                    theme:"sovok",
+                    autoHideScrollbar: false,
+                    alwaysShowScrollbar: 1,
+                    scrollButtons:{
+                        enable:true
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!--  Custom select  -->
+    <script src="js/jquery.selectBoxIt.min.js" type="text/javascript"></script>
+    <script src="js/jquery.selectRadio.js" type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="css/jquery.selectBoxIt.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.selectRadio.css" />
+
+</head>
+<body>
+
+<div class="header">
+    <div class="wrapper">
+        <div class="left">
+            <div class="logo"></div>
+            <div class="separator"></div>
+            <div class="name">
+                сервис российского <br />
+                онлайн телевидения
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="info">
+                Вы вошли как: <a href="#">COMDEV</a> <a href="#" class="exit">Выйти</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-body">
+    <div class="wrapper-resize cabinet">
+        <div class="left-column">
+            <div class="user-search">
+                Поиск пользователя
+            </div>
+
+            <form class="form-user-search" method="post" action="#">
+                <div class="input">
+                    <div class="label">ID:</div>
+                    <input name="login" type="text" value="логин" onfocus="if (this.value=='логин') this.value='';" onblur="if (this.value=='') this.value='логин';">
+                </div>
+
+                <div class="input">
+                    <div class="label">Login:</div>
+                    <input name="login" type="text" value="логин" onfocus="if (this.value=='логин') this.value='';" onblur="if (this.value=='') this.value='логин';">
+                </div>
+
+                <div class="input">
+                    <div class="label">Email:</div>
+                    <input name="login" type="text" value="логин" onfocus="if (this.value=='логин') this.value='';" onblur="if (this.value=='') this.value='логин';">
+                </div>
+
+                <div class="input">
+                    <div class="label">MAC:</div>
+                    <input name="login" type="text" value="логин" onfocus="if (this.value=='логин') this.value='';" onblur="if (this.value=='') this.value='логин';">
+                </div>
+
+                <div class="submit">
+                    <input class="button-user-search" type="submit" value="">
+                </div>
+            </form>
+
+            <div class="smallcontainer">
+                <div class="separator-horizontal"></div>
+
+                <div class="button-arrow">Пользователи</div>
+                <div class="button-arrow">Еще что-то</div>
+            </div>
+
+        </div>
+
+        <div class="main-column padding-top-none">
+
+            <div class="information">
+                <div class="user"><div class="i-login"></div> Пользователь: Admin</div>
+                    <div id="freetile">
+                    <div id="user-info" class="multiblock">
+                        <table>
+                            <tr>
+                                <th colspan="2"><i class="icon info"></i> Общая информация <a href="#modal-user-info"><span class="icon edit"></span></a>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>ID:</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Логин:</td>
+                                <td>Admin</td>
+                            </tr>
+                            <tr>
+                                <td>Имя:</td>
+                                <td>Alex</td>
+                            </tr>
+                            <tr>
+                                <td>Фамилия:</td>
+                                <td>Jons</td>
+                            </tr>
+                            <tr>
+                                <td>Пол:</td>
+                                <td>Мужской</td>
+                            </tr>
+                            <tr>
+                                <td>Пароль:</td>
+                                <td><a class="multiblock-url" href="#">выслать</a></td>
+                            </tr>
+                            <tr>
+                                <td>Почта:</td>
+                                <td>rumyn@ya.ru</td>
+                            </tr>
+                            <tr>
+                                <td>Баланс:</td>
+                                <td>4607.5</td>
+                            </tr>
+                            <tr>
+                                <td>Холд:</td>
+                                <td>177.52</td>
+                            </tr>
+                            <tr>
+                                <td>IP:</td>
+                                <td>188.235.187.153</td>
+                            </tr>
+                            <tr>
+                                <td>Зарегистрирован:</td>
+                                <td>14.11.2011</td>
+                            </tr>
+                            <tr>
+                                <td>Последний вход:</td>
+                                <td>21.05.2014</td>
+                            </tr>
+                            <tr>
+                                <td>Дата рождения: </td>
+                                <td>18.12.1968</td>
+                            </tr>
+                            <tr>
+                                <td>Активирован:</td>
+                                <td>Да</td>
+                            </tr>
+                            <tr>
+                                <td>Статус:</td>
+                                <td>Администратор</td>
+                            </tr>
+                            <tr>
+                                <td>Страна:</td>
+                                <td>Италия (Italia)</td>
+                            </tr>
+                            <tr>
+                                <td>Город:</td>
+                                <td>Palermo</td>
+                            </tr>
+                            <tr>
+                                <td>Рефовод:</td>
+                                <td><span class="red">Нет</span></td>
+                            </tr>
+                            <tr>
+                                <td>Число рефералов:</td>
+                                <td><a class="multiblock-url" href="#">6 пересчитать</a></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div id="user-config" class="multiblock">
+                        <table>
+                            <tr>
+                                <th colspan="2"><i class="icon config"></i> Параметры <a href="#modal-user-config"><span class="icon edit"></span></a></th>
+                            </tr>
+                            <tr>
+                                <td>Сервер вещания:</td>
+                                <td>1 - Streamer 1</td>
+                            </tr>
+                            <tr>
+                                <td>PIN1:</td>
+                                <td>1111</td>
+                            </tr>
+                            <tr>
+                                <td>PIN2:</td>
+                                <td>2240</td>
+                            </tr>
+                            <tr>
+                                <td>Время генерации:</td>
+                                <td>22.04.2014 11:15:16</td>
+                            </tr>
+                            <tr>
+                                <td>Time Zone:</td>
+                                <td>+04:00:00</td>
+                            </tr>
+                            <tr>
+                                <td>Буфер:</td>
+                                <td>8000</td>
+                            </tr>
+                            <tr>
+                                <td>Деинтерлейс:</td>
+                                <td>bob</td>
+                            </tr>
+                            <tr>
+                                <td>Рассылка:</td>
+                                <td>Да</td>
+                            </tr>
+                            <tr>
+                                <td>Уведомления услуг:</td>
+                                <td>Да</td>
+                            </tr>
+                            <tr>
+                                <td>Уведомления реф.:</td>
+                                <td>Да</td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+
+                    <div class="multiblock">
+                        <table class="table-3">
+                            <tr>
+                                <th colspan="3">
+                                    <i class="icon tv"></i> Услуги
+                                    <a href="#">
+                                        <span class="icon t"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="icon plus"></span>
+                                    </a>
+                                </th>
+                            </tr>
+                            <tr class="table-tr-bg">
+                                <td>Тип/Услуга</td>
+                                <td>Оканчивается</td>
+                                <td>Действия</td>
+                            </tr>
+                        </table>
+                        <div class="scrolled" style="height: 150px;">
+                            <table class="table-3">
+                                <tr>
+                                    <td>Пакет каналов / Взрослый</td>
+                                    <td>11.12.2014 13:13</td>
+                                    <td><a href="#"><span onclick="showModal('service-edit')" class="icon edit"></span></a><a href="#"><span class="icon trash"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Пакет каналов / HD</td>
+                                    <td>11.12.2014 13:13</td>
+                                    <td><a href="#"><span onclick="showModal('service-edit')" class="icon edit"></span></a><a href="#"><span class="icon trash"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Мультиабонемент / Мульти</td>
+                                    <td></td>
+                                    <td><a href="#"><span onclick="showModal('service-edit')" class="icon edit"></span></a><a href="#"><span class="icon trash"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Плейлист / Sovok.m3u</td>
+                                    <td>21.12.2014 13:13</td>
+                                    <td><a href="#"><span onclick="showModal('service-edit')" class="icon edit"></span></a><a href="#"><span class="icon trash"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Плейлист / Базовый</td>
+                                    <td>21.12.2014 13:13</td>
+                                    <td><a href="#"><span onclick="showModal('service-edit')" class="icon edit"></span></a><a href="#"><span class="icon trash"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Плейлист / Базовый</td>
+                                    <td>21.12.2014 13:13</td>
+                                    <td><a href="#"><span onclick="showModal('service-edit')" class="icon edit"></span></a><a href="#"><span class="icon trash"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Плейлист / Базовый</td>
+                                    <td>21.12.2014 13:13</td>
+                                    <td><a href="#"><span onclick="showModal('service-edit')" class="icon edit"></span></a><a href="#"><span class="icon trash"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Плейлист / Базовый</td>
+                                    <td>21.12.2014 13:13</td>
+                                    <td><a href="#"><span onclick="showModal('service-edit')" class="icon edit"></span></a><a href="#"><span class="icon trash"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Плейлист / Базовый</td>
+                                    <td>21.12.2014 13:13</td>
+                                    <td><a href="#"><span onclick="showModal('service-edit')" class="icon edit"></span></a><a href="#"><span class="icon trash"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Плейлист / Базовый</td>
+                                    <td>21.12.2014 13:13</td>
+                                    <td><a href="#"><span onclick="showModal('service-edit')" class="icon edit"></span></a><a href="#"><span class="icon trash"></span></a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="multiblock">
+                        <table class="table-3 payments">
+                            <tr>
+                                <th colspan="4">
+                                    <i class="icon payments"></i> Статистика платежей
+                                    <a href="#">
+                                        <span class="icon refresh"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="icon search"></span>
+                                    </a>
+                                </th>
+                            </tr>
+                            <tr class="table-tr-bg">
+                                <td class="system">Система <i></i></td>
+                                <td class="sum">Сумма <i></i></td>
+                                <td class="date">Дата <i></i></td>
+                                <td>Инфо <i></i></td>
+                            </tr>
+                        </table>
+                        <div class="scrolled" style="height: 305px">
+                            <table class="table-3 payments">
+                                <tr>
+                                    <td class="balance">Баланс</td>
+                                    <td class="sum red">-31,00 €</td>
+                                    <td class="date">13.05.2014 13:13:15</td>
+
+                                    <td class="info">
+                                        <table class="payments-info">
+                                            <tr>
+                                                <td>Взрослый</td>
+                                                <td class="pay green">4 €</td>
+                                                <td>3м</td>
+                                            </tr>
+                                            <tr>
+                                                <td>HD</td>
+                                                <td class="pay green">2 €</td>
+                                                <td>3 м.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sovok.m3u</td>
+                                                <td class="pay green">40 €</td>
+                                                <td>3 м.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Мульти</td>
+                                                <td class="pay green">400 €</td>
+                                                <td>3 м. <br/> 1 м.</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td class="balance">Баланс</td>
+                                    <td class="sum red">-15,00 €</td>
+                                    <td class="date">12.05.2014 12:11:09</td>
+
+                                    <td class="info">
+                                        <table class="payments-info">
+                                            <tr>
+                                                <td>Мульти</td>
+                                                <td class="pay green">15 €</td>
+                                                <td>3 м.</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td class="balance">Баланс</td>
+                                    <td class="sum red">-15,00 €</td>
+                                    <td class="date">12.05.2014 12:11:09</td>
+
+                                    <td class="info">
+                                        <table class="payments-info">
+                                            <tr>
+                                                <td>Взрослый</td>
+                                                <td class="pay green">4 €</td>
+                                                <td>3 м.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>HD</td>
+                                                <td class="pay green">4 €</td>
+                                                <td>1 д. <br/> 3 д. <br/> 1 м. <br/> 3 м. <br/> 3 м. <br/> 10 д. <br/> </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <div id="user-aura" class="multiblock">
+                        <table>
+                            <tr>
+                                <th colspan="2"><i class="icon aura"></i> Аура <a href="#modal-user-aura"><span class="icon edit"></span></a></th>
+                            </tr>
+                            <tr>
+                                <td>Состояние:</td>
+                                <td>Включена</td>
+                            </tr>
+                            <tr>
+                                <td>МАС:            сброс</td>
+                                <td>00:1A:79:11:D7:FF</td>
+                            </tr>
+                            <tr>
+                                <td>Логин:</td>
+                                <td>Admin</td>
+                            </tr>
+                            <tr>
+                                <td>Пароль:</td>
+                                <td>111111</td>
+                            </tr>
+
+                            <tr>
+                                <td>Приставка:</td>
+                                <td>MAG245</td>
+                            </tr>
+                            <tr>
+                                <td>IP:</td>
+                                <td>188.235.151.225</td>
+                            </tr>
+                            <tr>
+                                <td>Тариф:</td>
+                                <td>Базовый+Взрослый+HD</td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+    </div>
+
+
+        <div class="clear"></div>
+
+
+    </div>
+</div>
+
+
+<div class="footer"></div>
+
+
+
+<div id="modal" class="modal">
+
+    <div id="modal-user-info" class="block">
+        <div class="top">
+            <div class="title"><i class="icon info-white"></i>Редактирование пользователя<i class="icon close-white"></i></div>
+        </div>
+        <div class="middle">
+            <form action="#">
+
+                <table>
+                    <tr>
+                        <td>Логин:</td>
+                        <td><input type="text" name="login" value="sbk" /></td>
+                    </tr>
+                    <tr>
+                        <td>Имя:</td>
+                        <td><input type="text" name="name" value="Bogdan" /></td>
+                    </tr>
+                    <tr>
+                        <td>Фамилия:</td>
+                        <td><input type="text" name="soname" value="Sytnik" /></td>
+                    </tr>
+                    <tr>
+                        <td>Пол:</td>
+                        <td>
+                            <select name="status" size="1">
+                                <option value="man" selected="selected">Мужской</option>
+                                <option value="woman">Женский</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Почта:</td>
+                        <td><input type="text" name="soname" value="bodia.sbk@gmail.com" /></td>
+                    </tr>
+                    <tr>
+                        <td>Баланс:</td>
+                        <td><input type="text" name="soname" value="4500.5" /></td>
+                    </tr>
+                    <tr>
+                        <td>Холд:</td>
+                        <td><input type="text" name="soname" value="177.52" /></td>
+                    </tr>
+                    <tr>
+                        <td>Активирован:</td>
+                        <td>
+                            <div class="bgwhite">
+                                <label class="label_radio" for="radio-activate-yes">
+                                    <input name="active" id="radio-activate-yes" value="1" type="radio" />
+                                    Да
+                                </label>
+                                <label class="label_radio" for="radio-activate-no">
+                                    <input name="active" id="radio-activate-no" value="0" type="radio" />
+                                    Нет
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Статус:</td>
+                        <td>
+                            <select name="status" size="1">
+                                <option value="suadmin">Супер Администратор</option>
+                                <option value="admin"  selected="selected">Администратор</option>
+                                <option value="moder">Модератор</option>
+                                <option value="user">Пользователь</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Страна:</td>
+                        <td>
+                            <select name="status" size="1">
+                                <option value="by">Беларусь</option>
+                                <option value="ru">Россия</option>
+                                <option value="ua" selected="selected">Украина</option>
+                                <option value="uk">Англия</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Город:</td>
+                        <td><input type="text" name="soname" value="Киев" /></td>
+                    </tr>
+                    <tr>
+                        <td>Рефовод:</td>
+                        <td><input type="text" name="soname" value="0" /></td>
+                    </tr>
+                </table>
+
+                <div class="submit">
+                    <input class="button save" type="submit" value="Сохранить">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-user-config" class="block">
+        <div class="top">
+            <div class="title"><i class="icon config-white"></i>Редактирование настроек<i class="icon close-white"></i></div>
+        </div>
+        <div class="middle">
+            <form action="#">
+
+                <table>
+                    <tr>
+                        <td>Сервер вещания:</td>
+                        <td>
+                            <select name="server" size="1">
+                                <option value="1" selected="selected">Streamer 1</option>
+                                <option value="2">Test Server 1</option>
+                                <option value="3">UA Server</option>
+                                <option value="4">UAx Server</option>
+                                <option value="5">NNM</option>
+                                <option value="6">Test Server FR</option>
+                                <option value="7">Неизвестный</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PIN1:</td>
+                        <td><input type="text" name="pin1" value="1111" /></td>
+                    </tr>
+                    <tr>
+                        <td>PIN2:</td>
+                        <td><input type="text" name="pin2" value="2222" /></td>
+                    </tr>
+                    <tr>
+                        <td>Время генерации:</td>
+                        <td>
+                            <input type="text" name="generation-time" value="22.04.2014 15:30:12" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Time Zone:</td>
+                        <td>
+                            <select name="status" size="1">
+                                <option value="-12">-12:00:00</option>
+                                <option value="-11" selected="selected">-11:00:00</option>
+                                <option value="-10">-10:00:00</option>
+                                <option value="-9">-9:00:00</option>
+                                <option value="-8">-8:00:00</option>
+                                <option value="-7">-7:00:00</option>
+                                <option value="-6">-6:00:00</option>
+                                <option value="-5">-5:00:00</option>
+                                <option value="-4">-4:00:00</option>
+                                <option value="-3">-3:00:00</option>
+                                <option value="-2">-2:00:00</option>
+                                <option value="-1">-1:00:00</option>
+                                <option value="0">00:00:00</option>
+                                <option value="1">+01:00:00</option>
+                                <option value="2">+02:00:00</option>
+                                <option value="3">+03:00:00</option>
+                                <option value="4">+04:00:00</option>
+                                <option value="5">+05:00:00</option>
+                                <option value="6">+06:00:00</option>
+                                <option value="7">+07:00:00</option>
+                                <option value="8">+08:00:00</option>
+                                <option value="9">+09:00:00</option>
+                                <option value="10">+10:00:00</option>
+                                <option value="11">+11:00:00</option>
+                                <option value="12">+12:00:00</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Буфер:</td>
+                        <td><input type="text" name="soname" value="4500.5" /></td>
+                    </tr>
+                    <tr>
+                        <td>Деинтерлейс:</td>
+                        <td>
+                            <select name="status" size="1">
+                                <option value="bob" selected="selected">Bob</option>
+                                <option value="mary">Mary</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Рассылка:</td>
+                        <td>
+                            <div class="bgwhite">
+                                <label class="label_radio" for="radio-subscribe-yes">
+                                    <input name="subscribe" id="radio-subscribe-yes" value="1" type="radio" />
+                                    Да
+                                </label>
+                                <label class="label_radio" for="radio-subscribe-no">
+                                    <input name="subscribe" id="radio-subscribe-no" value="0" type="radio" />
+                                    Нет
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Уведомления услуг:</td>
+                        <td>
+                            <div class="bgwhite">
+                                <label class="label_radio" for="radio-alert-yes">
+                                    <input name="alert" id="radio-alert-yes" value="1" type="radio" />
+                                    Да
+                                </label>
+                                <label class="label_radio" for="radio-alert-no">
+                                    <input name="alert" id="radio-alert-no" value="0" type="radio" />
+                                    Нет
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Уведомления реф.:</td>
+                        <td>
+                            <div class="bgwhite">
+                                <label class="label_radio" for="radio-alert-ref-yes">
+                                    <input name="alert-ref" id="radio-alert-ref-yes" value="1" type="radio" />
+                                    Да
+                                </label>
+                                <label class="label_radio" for="radio-alert-ref-no">
+                                    <input name="alert-ref" id="radio-alert-ref-no" value="0" type="radio" />
+                                    Нет
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <div class="submit">
+                    <input class="button save" type="submit" value="сохранить">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-user-aura" class="block">
+        <div class="top">
+            <div class="title"><i class="icon aura-white"></i>Редактировать ауру<i class="icon close-white"></i></div>
+        </div>
+        <div class="middle">
+            <form action="#">
+                <table>
+                    <tr>
+                        <td>Состояние:</td>
+                        <td>
+                            <div class="bgwhite">
+                                <label class="label_radio" for="radio-status-yes">
+                                    <input name="subscribe" id="radio-status-yes" value="1" type="radio" />
+                                    Да
+                                </label>
+                                <label class="label_radio" for="radio-status-no">
+                                    <input name="subscribe" id="radio-status-no" value="0" type="radio" />
+                                    Нет
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Логин:</td>
+                        <td><input type="text" name="pin1" value="admin" /></td>
+                    </tr>
+                    <tr>
+                        <td>Пароль:</td>
+                        <td><input type="text" name="pin2" value="1111" /></td>
+                    </tr>
+                    <tr>
+                        <td>Тариф:</td>
+                        <td>
+                            <select name="server" size="1">
+                                <option value="1" selected="selected">Базовый</option>
+                                <option value="2">Премиум</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="submit">
+                    <input class="button save" type="submit" value="сохранить">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-service-edit" class="block">
+        <div class="top">
+            <div class="title"><i class="icon aura-white"></i>Редактировать услугу<i class="icon close-white"></i></div>
+        </div>
+        <div class="middle">
+            <form action="#">
+                <table>
+                    <tr>
+                        <td>Тип:</td>
+                        <td><input type="text" name="pin1" value="Базовый" disabled/></td>
+                    </tr>
+                    <tr>
+                        <td>Логин:</td>
+                        <td><input type="text" name="pin2" value="05.05.2014 14:07" /></td>
+                    </tr>
+                </table>
+
+                <div class="submit">
+                    <input class="button save" type="submit" value="сохранить">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,11 @@
+.has-js .label_check,
+.has-js .label_radio { padding-left: 14px;margin-left: 15px;position: relative }
+
+.has-js .label_radio { background: url('../images/sbk/radio-off.png') 0px 2px no-repeat; }
+.has-js .label_check { background: url('../images/sbk/check-off.png') no-repeat; }
+
+.has-js label.c_on { background: url('../images/sbk/check-on.png') no-repeat; }
+.has-js label.r_on { background: url('../images/sbk/radio-on.png') 0px 2px no-repeat; }
+
+.has-js .label_check input,
+.has-js .label_radio input {position: absolute; left: -9999px;}

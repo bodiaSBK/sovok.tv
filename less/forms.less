@@ -1,0 +1,215 @@
+.rounded-corners (@radius-top-left: 0px, @radius-top-right: 0px, @radius-bottom-left: 0px, @radius-bottom-right: 0px) {
+
+  border-top-right-radius: @radius-top-right;
+  border-top-left-radius: @radius-top-left;
+  border-bottom-right-radius: @radius-bottom-right;
+  border-bottom-left-radius: @radius-bottom-left;
+
+  /* OLD */
+  -moz-border-top-right-radius: @radius-top-right;
+  -moz-border-top-left-radius: @radius-top-left;
+  -moz-border-bottom-right-radius: @radius-bottom-right;
+  -moz-border-bottom-left-radius: @radius-bottom-left;
+
+  -webkit-border-top-right-radius: @radius-top-right;
+  -webkit-border-top-left-radius: @radius-top-left;
+  -webkit-border-bottom-right-radius: @radius-bottom-right;
+  -webkit-border-bottom-left-radius: @radius-bottom-left;
+
+}
+
+.border-box {
+  box-sizing:        border-box;
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+}
+
+
+.login {
+  width: 460px;
+  .title {
+    background: url("../images/sbk/form-title-bg.png") repeat;
+    height: 65px;
+    position: relative;
+    border: 1px solid #a8834a;
+    border-bottom: none;
+    .rounded-corners(12px,12px,0px,0px);
+    .border-box;
+
+    .lock {
+      position: relative;
+      top: 8px;
+      left: 25px;
+    }
+    .text {
+      position: relative;
+      left: 40px;
+      line-height: 60px;
+      display: inline-block;
+      font-family: "Impact";
+      font-size: 26px;
+      color: #7d4f04;
+      text-shadow: 0px 1px 1px rgba(208, 184, 146, 1);
+    }
+    .exit {
+      font-size: 14px;
+      color: #7d4f04;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      text-transform: lowercase;
+      .close {
+        margin-left: 5px;
+      }
+    }
+  }
+  .body {
+    background: url("../images/sbk/form-body-bg.png") repeat;
+    min-height: 150px;
+    border: 1px solid #a8834a;
+    border-top: none;
+    .rounded-corners(0px,0px,12px,12px);
+    .border-box;
+
+    .auth-center {
+      margin-left: 80px;
+      margin-right: 80px;
+      margin-bottom: 35px;
+      padding-top: 35px;
+
+      font-size: 14px;
+      color: #7d4f04;
+      .info {
+        line-height: 30px;
+        &:first-child {margin-top: -10px;}
+      }
+      span {
+        text-transform: uppercase;
+      }
+    }
+    .auth-subscribe {
+      font-size: 14px;
+      color: #7d4f04;
+      margin-left: 35px;
+      margin-right: 25px;
+      margin-bottom: 35px;
+      div {
+        text-align: center;
+      }
+      .auth-table {
+        border: 0px;
+        text-align: left;
+        width: 100%;
+        tr {line-height: 20px;}
+      }
+    }
+  }
+  .redirect {
+    color: #7d4f04;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    background: #dcb064;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    .rounded-corners(0px,0px,12px,12px);
+  }
+
+}
+
+.form-login {
+
+  .input {
+    position: relative;
+    input {
+      background: url("../images/sbk/form-input-bg.png") 0px 0px;
+      border: 0px;
+      width: 253px;
+      height: 34px;
+      padding-left: 44px;
+      font-size: 14px;
+      color: #937a52;
+      &:focus {
+        background: url("../images/sbk/form-input-bg.png") 0px 38px;
+        border: 0px;
+      }
+    }
+    &:first-child {margin-bottom: 23px;}
+    .login, .password {
+      position: absolute;
+      top: 11px;
+      left: 14px;
+    }
+    .verify {
+      position: absolute;
+      top: 9px;
+      right: -40px;
+    }
+  }
+  .submit {
+    margin-top: 28px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ALERTS */
+.alert {
+  font-family: "Verdana";
+  font-size: 14px;
+  color: #FFFFFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 700px;
+  text-align: center;
+  margin: 0 auto;
+  &.green {
+    background: url("../images/sbk/alert-green-bg.png");
+  }
+  &.red {
+    background: url("../images/sbk/alert-red-bg.png");
+  }
+}
+
+
+
+
+/* BUTTONS */
+
+.button {
+  background: url("../images/sbk/button-bg.png");
+  width: 293px;
+  height: 42px;
+  border: 1px solid #9c6306;
+  font-family: "Verdana";
+  font-size: 14px;
+  color: #feffff;
+  text-transform: uppercase;
+  line-height: 40px;
+  text-align: center;
+  text-shadow: 0px 1px 1px rgba(7, 7, 7, 0.53);
+  cursor: pointer;
+  .border-box;
+  .rounded-corners(4px,4px,4px,4px);
+  &:active{background: url("../images/sbk/button-bg-active.png");}
+  &.submit {
+    margin: 28px auto 0 auto;
+  }
+  &.search-left {
+    width: 200px;
+    line-height: 34px;
+    text-transform: lowercase;
+  }
+  &.save {
+    margin: 20px auto 20px auto;
+    text-transform: capitalize;
+  }
+}
